@@ -12,24 +12,26 @@ if(get_theme_mod('info_logo') !== ''){
     $site_logo_type = get_headers($site_logo, 1)["Content-Type"];
 }
 
-// opret fra forældre
-function smamo_page_logo_url_type($id){
-    
-    if (get_post_meta($id,'page_logo',true) !== ''){return;}
-    
-    $attachment_id = get_post_meta($id,'page_logo',true);
-    
-    $site_logo = wp_get_attachment_url($attachment_id);
-    $site_logo_type = get_post_mime_type( $attachment_id );
-}
 
 $parents = get_post_ancestors( get_the_ID() );
 foreach($parents as $parent){
-    smamo_page_logo_url_type($parent);
+   if (get_post_meta($parent,'page_logo',true) !== ''){
+    
+        $attachment_id = get_post_meta($parent,'page_logo',true);
+
+        $site_logo = wp_get_attachment_url($attachment_id);
+        $site_logo_type = get_post_mime_type( $attachment_id );
+    }
 }
 
 // opret fra sig selv
-smamo_page_logo_url_type(get_the_ID());
+if (get_post_meta(get_the_ID(),'page_logo',true) !== ''){
+    
+    $attachment_id = get_post_meta(get_the_ID(),'page_logo',true);
+
+    $site_logo = wp_get_attachment_url($attachment_id);
+    $site_logo_type = get_post_mime_type( $attachment_id );
+}
 
 ?>
 <a href="<?php echo $site_url; ?>" class="top-banner-logo" title="<?php echo $site_name; ?>">
