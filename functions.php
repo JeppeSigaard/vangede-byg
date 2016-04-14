@@ -82,6 +82,7 @@ get_functions_part(array(
 get_functions_part(array(
     'email',
     'testemonial',
+    'medarbejder',
 ),'post-types');
 
 
