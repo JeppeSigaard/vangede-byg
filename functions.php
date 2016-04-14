@@ -73,7 +73,8 @@ get_functions_part(array(
     'remove-tags',
     'post-labels',
     'remove-page-editor',
-    'piklist'
+    'piklist',
+    'widgets',
 ));
 
 

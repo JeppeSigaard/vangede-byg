@@ -1,0 +1,15 @@
+.widget{
+    color: white;
+    padding: 20px;
+    font-size:90%;
+    
+    ul{
+        list-style: none;
+        padding: 0;
+        
+        a{
+            display: block;
+            line-height: inherit;
+        }
+    }
+}

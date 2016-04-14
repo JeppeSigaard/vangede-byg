@@ -10,6 +10,7 @@
     <aside class="fixed-aside">
         <div class="inner">
             <?php get_template_part('template-parts/sidebar/sidemenu',get_post_type(get_the_ID())); ?>
+            <?php get_template_part('template-parts/sidebar/sidebar-widgets'); ?>
         </div>
     </aside>
 </section>
