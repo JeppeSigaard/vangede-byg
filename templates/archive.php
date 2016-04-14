@@ -1,6 +1,6 @@
 <section class="article-section">
     <main>
-        <?php get_template_part('template-parts/common/article-header'); ?>
+        <?php if (have_posts()) : get_template_part('template-parts/common/article-header'); ?>
         <article>
             <?php $i = 0; while(have_posts() ) : the_post(); $i++; if ($i === 1) : ?>
             <?php get_template_part('template-parts/common/article-content');?>
@@ -12,10 +12,15 @@
             <?php endif;  endwhile;?>
             </ul>
         </article>
+        <?php else : ?>
+        <article>
+            <?php get_template_part('template-parts/common/article-content','none');?>
+        </article>
+        <?php endif; ?>
     </main>
     <aside class="fixed-aside">
         <div class="inner">
-            <?php get_template_part('template-parts/sidebar/sidemenu',get_post_type(get_the_ID())); ?>
+            <?php get_template_part('template-parts/sidebar/sidemenu-post'); ?>
         </div>
     </aside>
 </section>

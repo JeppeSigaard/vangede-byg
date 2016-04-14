@@ -1,6 +1,6 @@
 <?php 
 
-$terms = get_terms('category',array('hide_empty' => 1));
+$terms = get_terms('category',array('hide_empty' => 0));
 $post_terms_array = array();
 $post_terms = wp_get_post_terms(get_the_ID(), 'category');
 foreach($post_terms as $term){

@@ -75,6 +75,7 @@ get_functions_part(array(
     'remove-page-editor',
     'piklist',
     'widgets',
+    'gallery',
 ));
 
 

@@ -1,6 +1,6 @@
 <?php 
 
-$terms = get_terms('category',array('hide_empty' => 1));
+$terms = get_terms('category',array('hide_empty' => 0));
 
 ?>
 <ul class="side-menu">
