@@ -1,5 +1,15 @@
 <?php 
 
+// email 
+function sendEmail( $from_name, $from, $to, $subject, $message ){
+    $header = "From: ".$from_name." <".$from.">\r\n"; 
+    $header.= "MIME-Version: 1.0\r\n"; 
+    $header.= "Content-Type: text/html; charset=utf-8\r\n"; 
+    $header.= "X-Priority: 1\r\n"; 
+    $email = wp_mail($to, $subject, $message, $header);
+    return $email;
+}
+
 // get_functions_part([$filnavn],[$undermappe]);
 function smamo_include_functions_part_if_exists($fetch, $in = false){
     if ($in){$fetch = $in . '/' . $fetch;}
@@ -97,3 +107,7 @@ if (class_exists('Kirki')){
         'testemonial',
     ),'kirki');
 }
+
+get_functions_part(array(
+    'cta',
+),'ajax');
