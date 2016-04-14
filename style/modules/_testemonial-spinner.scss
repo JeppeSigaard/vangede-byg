@@ -1,0 +1,89 @@
+.testemonial-spinner{
+    background-color: #333;
+    
+    
+    .flickity-viewport,
+    .flickity-slider,
+    .testemonial{
+        display: block;
+        width: 100%;
+        top: 0;
+    }
+    
+    .flickity-page-dots{
+        bottom: 20px;
+        
+        .dot{
+            width: 15px;
+            height: 15px;
+            opacity: 1;
+            background-color: white;
+
+            &.is-selected{
+                opacity: .7;
+            }
+        }
+    }
+    
+}
+
+.testemonial{
+    @extend %article-font-style;
+    padding: 90px 10px 90px;
+    overflow: hidden;
+    
+    @media only screen and(min-width:480px){
+        
+        padding: 110px 20px 130px;
+    }
+    
+    @media only screen and(min-width:960px){
+        
+        padding: 130px 20px 150px;
+    }
+    
+    @media only screen and(min-width:1280px){
+        
+        padding: 150px 20px 180px;
+    }
+    
+    h2,
+    blockquote{
+        color: white;
+        position: relative;
+        max-width: 640px;
+        margin: auto;
+    }
+    
+    h2{
+        position: relative;
+        font-weight: 700;
+        margin-bottom: .7rem;
+        font-size: 120%;
+        
+        &:before{
+            content: ',,';
+            position: absolute;
+            display: block;
+            left: -40px;
+            font-size: 80px;
+            width: 85px;
+            top: -120px;
+            font-family: serif;
+            transform: rotateY(180deg);
+            
+            @media only screen and(min-width:786px){
+                left: -100px;
+                top: -80px;
+                
+            }
+            
+            @media only screen and(min-width:960px){
+                left: -150px;
+                
+            }
+            
+        }
+    }
+    
+}

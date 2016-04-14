@@ -1,0 +1,34 @@
+html,body{
+
+    @extend %font-size;
+    //min-width: 320px;
+    font-family:$base-font;
+    color:$base-color;
+    background-color:$base-color;
+    font-weight: $base-font-weight;
+    box-sizing:border-box;
+    text-rendering: geometricPrecision;
+    backface-visibility: hidden;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1;
+    width:100%;
+    overflow-x: hidden;
+
+    
+    *{
+        box-sizing:inherit;
+        backface-visibility: inherit;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+::selection {
+        // background: #333;
+    }
+::-moz-selection {
+        // background: #333;
+    }

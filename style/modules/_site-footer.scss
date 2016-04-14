@@ -1,0 +1,27 @@
+.site-footer{
+    padding: 50px 10px 70px;
+    text-align: center;
+    color: white;
+    background-color: #333;
+    @extend %article-font-style;
+    font-size:90%;
+    
+    a{
+        color: $color-orange;
+    }
+    
+    span:nth-child(n+2):before{
+            content: '\00b7';
+            display: inline-block;
+            padding: 0px 7px 0px 3px;
+
+        }
+    
+        
+    @media only screen and(min-width:480px){
+        padding: 70px 20px 90px;
+        
+        
+    }
+    
+}

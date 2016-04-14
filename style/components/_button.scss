@@ -1,0 +1,45 @@
+.button{
+    background-color:$color-orange;
+    transition: background-color 120ms;
+    padding: 15px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    color: white!important;
+    box-shadow: 1px 1px 3px 0px rgba(black,.2);
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid darken($color-orange,8);
+    border-right: 1px solid darken($color-orange,4);
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    outline: none;
+    font-size: inherit;
+    
+    &:hover{
+        background-color: lighten($color-orange,5);
+    }
+    
+    &:active{
+        background-color: darken($color-orange,2);
+        transition: all 0s;
+    }
+    
+    &.white{
+        background-color:rgba(white,.95);
+        border-bottom-color: white;
+        border-right-color: white;
+        color: #333!important;
+        
+        &:hover{
+            background-color: rgba(white,.98);
+        }
+
+        &:active{
+            background-color: rgba(white,.90);
+        }
+        
+    }
+    
+    
+}

@@ -1,0 +1,28 @@
+.address-card{
+    
+    background: $color-orange;
+    
+    
+    .address-map{
+        @extend %fill-bg;
+        padding-bottom: 70%;
+        display: block;
+    }
+    
+    .address-info{
+        padding: 30px 20px 50px;
+        
+        strong{
+            font-weight: 700;
+        }
+        
+        span{
+            display: block;
+            text-transform: uppercase;
+            @extend %article-font-style;
+            color: white;
+        }
+        
+    }
+    
+}

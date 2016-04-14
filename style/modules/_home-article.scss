@@ -1,0 +1,70 @@
+.home-article{
+    position: relative;
+    z-index: 1;
+    font-size: 0;
+    background-color: white;
+    
+    article{
+        position: relative;
+        @extend %article-font-style;
+        padding: 30px 10px 130px;
+        
+        @media only screen and(min-width:480px){
+            padding: 30px 20px 150px;
+            
+        }
+        
+        @media only screen and(min-width:768px){
+            padding: 30px 20px 110px;
+            
+        }
+        
+        max-width: 640px;
+        margin: auto;
+    }
+    
+    .button{
+        @include center(true,false);
+        bottom: 40px;
+        @media only screen and(min-width:480px){
+            bottom: 50px;
+        }
+        @media only screen and(min-width:768px){
+            bottom: 30px;
+        }
+        
+    }
+    
+    .article-header{
+        font-weight: 700;
+        font-size: 150%;
+        margin-bottom: .7rem;
+    }
+    
+    .aside-header{
+        height:80px;
+        background: #333;
+        color: white;
+        font-size: 125%;
+        font-weight: 700;
+        line-height: 80px;
+        text-align: center;
+    }
+    
+    main,aside{
+         @extend %font-size;
+    }
+    
+    @media only screen and(min-width:768px){
+        
+        
+        main,aside{
+            
+            vertical-align: top;
+            width: 50%;
+            display: inline-block;
+        }
+        
+    }
+    
+}

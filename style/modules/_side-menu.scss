@@ -1,0 +1,23 @@
+.side-menu{
+    
+    background-color: $color-dark-orange;
+    
+    .current-menu-item a,
+    a:hover{
+        background-color: $color-orange;
+    }
+    
+    a{
+        display: block;
+        transition: background-color 120ms;
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 10px;
+        color: white!important;
+        border-bottom: 1px solid #333;
+        @media only screen and(min-width:960px){
+            font-size:90%; 
+        }
+        
+    }
+}

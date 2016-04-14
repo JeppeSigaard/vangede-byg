@@ -1,0 +1,27 @@
+.circle-icon{
+    border: 2px solid $color-orange;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,.2);
+    background-color: white;
+    font-size: 0;
+    
+    svg{
+        width: 70%;
+        height: 70%;
+        fill: #333;
+        @include center(true,true);
+    }
+    
+    @media only screen and(min-width:768px){
+
+        width:50px;
+        height:50px;
+        line-height:50px;
+        
+    }   
+}
