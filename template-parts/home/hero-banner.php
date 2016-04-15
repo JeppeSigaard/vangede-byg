@@ -22,7 +22,7 @@ if (true == get_theme_mod('show_latest_posts',true)){
         $heading = get_post_meta($p->ID,'page_title',true);
         if (!$heading){$heading = $p->post_title;} 
         
-        $slides[] = array(
+        $slides[$p->ID] = array(
             'url' => get_permalink($p->ID),
             'img' => $image_url[0],
             'title' => $heading,
@@ -33,23 +33,30 @@ if (true == get_theme_mod('show_latest_posts',true)){
 // Hent fra manuel selektion?
 if (true == get_theme_mod('slide_metabox',true)){
     $meta_box_slides = get_posts(array(
-        'post_type' => 'any',
+        'post_type' => array('post','page'),
         'posts_per_page' => -1,
-        'meta_key' => 'show_in_slideshow',
-        'meta_value' => '1',
+        'meta_key' => 'show_in_slide',
+        'meta_value' => 'active',
     )); 
 
     foreach($meta_box_slides as $p){
         $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($p->ID), '1600-530' );
         
-        $heading = get_post_meta($p->ID(),'page_title',true);
-        if (!$heading){$heading = $p->post_title;} 
+        $page_slide_image = get_post_meta($p->ID,'page_slide_image',true);
+        if($page_slide_image){
+            $image_url = wp_get_attachment_image_src($page_slide_image,'1600-530');
+        }
         
-        $slides[] = array(
+        $heading = get_post_meta($p->ID,'page_title',true);
+        $alt_heading = get_post_meta($p->ID,'page_slide_title',true);
+        if($alt_heading){$heading = $alt_heading;}
+        elseif (!$heading){$heading = $p->post_title;} 
+        
+        $slides[$p->ID] = array(
             'url' => get_permalink($p->ID),
             'img' => $image_url[0],
             'title' => $heading,
-        );   
+        ); 
     }
 }
 
@@ -70,7 +77,7 @@ if (true == get_theme_mod('show_custom_slides',true)){
     }
 }
 
-if (!empty($slides)) :
+if (!empty($slides)) : 
 ?>
 <section class="hero-banner">
     <?php foreach ($slides as $slide) : ?>

@@ -10,7 +10,6 @@ function smamo_cta(){
         'name' => (isset($_POST['name'])) ? esc_attr($_POST['name']) : false,
         'email' => (isset($_POST['email'])) ? esc_attr($_POST['email']) : false,
         'phone' => (isset($_POST['phone'])) ? esc_attr($_POST['phone']) : false,
-        'company' => (isset($_POST['company'])) ? esc_attr($_POST['company']) : false,
         'message' => (isset($_POST['message'])) ? esc_textarea($_POST['message']) : false,
     );
     

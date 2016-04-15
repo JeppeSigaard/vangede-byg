@@ -5,24 +5,18 @@
         <div>
             <p>Udfyld kontaktformularen og vi skal kontakte dig snarest</p>
         </div>
+        <div>
+            <input type="text" name="name" required>
+            <label for="name">Navn</label>
+        </div>
         <div class="split">
-            <div>
-                <input type="text" name="name" required>
-                <label for="name">Navn</label>
-            </div>
             <div>
                 <input type="email" name="email" required>
                 <label for="email">Email</label>
             </div>
-        </div>
-        <div class="split">
-           <div>
+            <div>
                 <input type="text" name="phone" required>
                 <label for="phone">Telefonnummer</label>
-            </div>
-            <div>
-                <input type="text" name="company">
-                <label for="company">Firmanavn</label>
             </div>
         </div>
         <div>

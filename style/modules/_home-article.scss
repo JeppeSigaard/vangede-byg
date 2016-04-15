@@ -1,3 +1,15 @@
+.home-article.home-article-alt{
+    padding: 20px 0px;
+    @media only screen and(min-width:480px){ padding: 30px 0px;}
+    @media only screen and(min-width:640px){ padding: 40px 0px;}
+    @media only screen and(min-width:768px){ padding: 50px 0px;}
+    
+    .article-header{
+        font-size: 180%;
+    }
+    
+}
+
 .home-article{
     position: relative;
     z-index: 1;
@@ -58,7 +70,8 @@
     @media only screen and(min-width:768px){
         
         
-        main,aside{
+        &:not(.home-article-alt) main,
+        &:not(.home-article-alt) aside{
             
             vertical-align: top;
             width: 50%;

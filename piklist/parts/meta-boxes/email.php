@@ -36,15 +36,6 @@ piklist('field', array(
 ));
 
 piklist('field', array(
-    'type' => 'text',
-    'field' => 'email_company',
-    'label' => 'Evt. firmanavn',
-    'attributes' => array(
-        'class' => 'widefat',
-    ),
-));
-
-piklist('field', array(
     'type' => 'textarea',
     'field' => 'email_message',
     'label' => 'Kommentar',

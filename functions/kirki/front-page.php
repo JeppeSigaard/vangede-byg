@@ -46,8 +46,8 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 Kirki::add_field( 'smamo_front_page_settings', array(
 	'type'        => 'checkbox',
 	'settings'    => 'show_latest_posts',
-	'label'       => __( 'Inkluder seneste artikler', 'my_textdomain' ),
-	'description' => __( 'Opretter automatisk et slideshow fra hjemmesidens arkiov over artikler', 'my_textdomain' ),
+	'label'       => __( 'Inkluder seneste artikler', 'smamo' ),
+	'description' => __( 'Opretter automatisk et slideshow fra hjemmesidens arkiov over artikler', 'smamo' ),
 	'section'     => 'slideshow',
 	'default'     => '1',
 	'priority'    => 10,
@@ -56,7 +56,7 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 Kirki::add_field( 'smamo_front_page_settings', array(
 	'type'        => 'number',
 	'settings'    => 'post_slides_per_page',
-	'description'       => __( 'Antal', 'my_textdomain' ),
+	'description'       => __( 'Antal', 'smamo' ),
 	'section'     => 'slideshow',
 	'default'     => '4',
 	'priority'    => 10,
@@ -65,7 +65,7 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 Kirki::add_field( 'smamo_front_page_settings', array(
 	'type'        => 'select',
 	'settings'    => 'post_slides_cat',
-	'description'       => __( 'Vis fra kategori(er)', 'my_textdomain' ),
+	'description'       => __( 'Vis fra kategori(er)', 'smamo' ),
 	'section'     => 'slideshow',
 	'default'     => '0',
 	'priority'    => 10,
@@ -77,8 +77,8 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 Kirki::add_field( 'smamo_front_page_settings', array(
 	'type'        => 'checkbox',
 	'settings'    => 'slide_metabox',
-	'label'       => __( 'TIlvælg manuelt artikler og sider', 'my_textdomain' ),
-    'description' => __( 'Opretter mulighed for tilvalg af visning i slideshow i redigeringen for en side eller en artikel', 'my_textdomain' ),
+	'label'       => __( 'TIlvælg manuelt artikler og sider', 'smamo' ),
+    'description' => __( 'Opretter mulighed for tilvalg af visning i slideshow i redigeringen for en side eller en artikel', 'smamo' ),
 	'section'     => 'slideshow',
 	'default'     => '0',
 	'priority'    => 10,
@@ -88,8 +88,8 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 Kirki::add_field( 'smamo_front_page_settings', array(
 	'type'        => 'checkbox',
 	'settings'    => 'show_custom_slides',
-	'label'       => __( 'Inkluder egne slides', 'my_textdomain' ),
-    'description' => __( 'Opret dine egne slides ved at tilføje dem herunder', 'my_textdomain' ),
+	'label'       => __( 'Inkluder egne slides', 'smamo' ),
+    'description' => __( 'Opret dine egne slides ved at tilføje dem herunder', 'smamo' ),
 	'section'     => 'slideshow',
 	'default'     => '0',
 	'priority'    => 10,
@@ -97,24 +97,24 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 
 Kirki::add_field( 'smamo_front_page_settings', array(
 	'type'        => 'repeater',
-	'label'       => esc_attr__( 'Tilføj ekstra slides', 'my_textdomain' ),
+	'label'       => esc_attr__( 'Tilføj ekstra slides', 'smamo' ),
 	'section'     => 'slideshow',
 	'priority'    => 10,
 	'settings'    => 'custom_slides',
 	'fields' => array(
 		'slide_text' => array(
 			'type'        => 'text',
-			'label'       => esc_attr__( 'Slide Tekst', 'my_textdomain' ),
+			'label'       => esc_attr__( 'Slide Tekst', 'smamo' ),
 			'default'     => '',
 		),
 		'slide_url' => array(
 			'type'        => 'text',
-			'label'       => esc_attr__( 'Slide URL', 'my_textdomain' ),
+			'label'       => esc_attr__( 'Slide URL', 'smamo' ),
 			'default'     => '',
 		),
         'slide_img' => array(
 			'type'        => 'img',
-			'label'       => esc_attr__( 'Slide billede', 'my_textdomain' ),
+			'label'       => esc_attr__( 'Slide billede', 'smamo' ),
 			'default'     => '',
 		),
 	)
@@ -179,7 +179,7 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 		),
         
 		'afdeling_img' => array(
-			'type'        => 'file',
+			'type'        => 'image',
 			'label'       => esc_attr__( 'Baggrundsbillede', 'smamo' ),
 			'default'     => '',
 		),
@@ -210,8 +210,8 @@ Kirki::add_section( 'front-article', array(
 Kirki::add_field( 'smamo_front_page_settings', array(
 	'type'        => 'toggle',
 	'settings'    => 'show_front_article',
-	'label'       => __( 'Inkluder en forsideartikel', 'my_textdomain' ),
-	'description' => __( 'Opretter et uddrag af en side på forsiden', 'my_textdomain' ),
+	'label'       => __( 'Inkluder en forsideartikel', 'smamo' ),
+	'description' => __( 'Opretter et uddrag af en side på forsiden', 'smamo' ),
 	'section'     => 'front-article',
 	'default'     => '1',
 	'priority'    => 10,
@@ -220,10 +220,19 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 Kirki::add_field( 'smamo_front_page_settings', array(
 	'type'        => 'dropdown-pages',
 	'settings'    => 'front_article',
-	'label'       => __( 'Vælg en side, som vises i uddrag på forsiden', 'my_textdomain' ),
+	'label'       => __( 'Vælg en side, som vises i uddrag på forsiden', 'smamo' ),
 	'section'     => 'front-article',
 	'default'     => 'Vælg en forside',
 	'priority'    => 10,
+) );
+
+Kirki::add_field( 'smamo_front_page_settings', array(
+	'type'        => 'number',
+	'settings'    => 'front_article_excerpt_length',
+	'label'       => __( 'Indstil uddragets længde', 'smamo' ),
+	'section'     => 'front-article',
+	'default'     => '70',
+	'priority'    => 13,
 ) );
 
 
@@ -238,8 +247,8 @@ Kirki::add_section( 'testemonials', array(
 Kirki::add_field( 'smamo_front_page_settings', array(
 	'type'        => 'toggle',
 	'settings'    => 'show_testemonials',
-	'label'       => __( 'Inkluder citatslider', 'my_textdomain' ),
-	'description' => __( 'Opretter et slideshow over citater', 'my_textdomain' ),
+	'label'       => __( 'Inkluder citatslider', 'smamo' ),
+	'description' => __( 'Opretter et slideshow over citater', 'smamo' ),
 	'section'     => 'testemonials',
 	'default'     => '1',
 	'priority'    => 10,
@@ -248,7 +257,7 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 Kirki::add_field( 'smamo_front_page_settings', array(
 	'type'        => 'number',
 	'settings'    => 'testemonials_slides_per_page',
-	'description'       => __( 'Antal citater', 'my_textdomain' ),
+	'description'       => __( 'Antal citater', 'smamo' ),
 	'section'     => 'testemonials',
 	'default'     => 4,
 	'priority'    => 10,

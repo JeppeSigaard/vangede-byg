@@ -7,7 +7,8 @@ $main_article = get_post(get_theme_mod('front_article'));
 $heading = get_post_meta($main_article->ID,'page_title',true);
 if (!$heading){$heading = $main_article->post_title;} 
 
-$excerpt = wp_trim_words(wp_strip_all_tags($main_article->post_content), $num_words = 70, $more = null);
+$excerpt_length = (get_theme_mod('front_article_excerpt_length') !== '') ? esc_attr(get_theme_mod('front_article_excerpt_length')) :  '70';
+$excerpt = wp_trim_words(wp_strip_all_tags($main_article->post_content), $num_words = $excerpt_length, $more = null);
 ?>
 <section class="home-article">
     <main>
