@@ -39,7 +39,7 @@ $excerpt = wp_trim_words(wp_strip_all_tags($main_article->post_content), $num_wo
                     <img src="<?php echo get_svg_uri('blank'); ?>" data-src="<?php echo $image_url[0] ?>">
                 </a>
                 <?php if ($download_link) : ?>
-                <a class="list-item-download circle-icon" href="<?php echo esc_url($download_link) ?>"><svg viewBox="-2 -2 37 37"><use xlink:href="#icon-pdf"></use></svg> Hent pdf</a>
+                <a target="blank" class="list-item-download circle-icon" href="<?php echo esc_url(get_bloginfo('url') .'?pdf='. get_the_ID()) ?>"><svg viewBox="-2 -2 37 37"><use xlink:href="#icon-pdf"></use></svg> Hent pdf</a>
                 <?php endif; ?>
             </li>
             <?php endif; endwhile; ?>

@@ -179,7 +179,7 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 		),
         
 		'afdeling_img' => array(
-			'type'        => 'image',
+			'type'        => 'file',
 			'label'       => esc_attr__( 'Baggrundsbillede', 'smamo' ),
 			'default'     => '',
 		),
