@@ -9,6 +9,7 @@
 
 piklist('include_meta_boxes',array( 
     'commentsdiv',
+    'categorydiv',
     'commentstatusdiv',
     'authordiv',
     'postimagediv',

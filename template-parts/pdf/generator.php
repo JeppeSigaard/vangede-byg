@@ -3,7 +3,11 @@ require get_template_directory() . '/functions/pdf/fpdf.class.php';
 require get_template_directory() . '/functions/pdf/pdf.class.php';
 
 
-$post_id = esc_attr($_GET['pdf']);
+$post_id = false;
+global $wp_query;
+if( null !== $wp_query->query_vars['pdf']){$post_id = esc_attr($wp_query->query_vars['pdf']);}
+if(isset($_GET['pdf'])){$post_id = esc_attr($_GET['pdf']);}
+
 $post = get_post($post_id);
 
 

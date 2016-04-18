@@ -111,3 +111,7 @@ if (class_exists('Kirki')){
 get_functions_part(array(
     'cta',
 ),'ajax');
+
+get_functions_part(array(
+    'rewrite',
+),'pdf');

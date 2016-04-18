@@ -113,7 +113,7 @@ Kirki::add_field( 'smamo_front_page_settings', array(
 			'default'     => '',
 		),
         'slide_img' => array(
-			'type'        => 'img',
+			'type'        => 'image',
 			'label'       => esc_attr__( 'Slide billede', 'smamo' ),
 			'default'     => '',
 		),
