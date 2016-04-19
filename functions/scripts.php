@@ -12,6 +12,6 @@ function theme_enqueue_scripts(){
     
     wp_register_script('lightbox',get_template_directory_uri() .'/scripts/assets/lightbox.js',array('jquery'),'1',true);
     wp_register_script('lightbox-settings',get_template_directory_uri() .'/scripts/modules/lightbox-settings.js',array('jquery','lightbox'),'1',true);
-    wp_enqueue_script('theme-script', get_template_directory_uri() . '/scripts/script.min.js' , array('jquery'), false, true);
+    wp_enqueue_script('theme-script', get_template_directory_uri() . '/scripts/script.min.js' , array('jquery'), '1', true);
     
 }
