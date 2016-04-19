@@ -2,6 +2,8 @@
 
 add_filter( 'post_gallery', 'smamo_media_gallery', 10, 3 );
 function smamo_media_gallery( $output = '', $atts, $instance ) {
+    wp_enqueue_script('lightbox');
+    wp_enqueue_script('lightbox-settings');
     ob_start(); ?>
     
     <ul class="gallery" id="smamo-gallery-<?php echo $instance ?>">

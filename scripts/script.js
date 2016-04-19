@@ -1,8 +1,5 @@
 //@koala-append 'assets/autosize.js';
-//@koala-append 'assets/js.cookie.js';
 //@koala-append 'assets/flickity.js';
-//@koala-append 'assets/styledselect.js';
-//@koala-append 'assets/lightbox.js';
 
 //@koala-append 'components/jio-data-img.js';
 //@koala-append 'components/avoid-empty-hash.js';
