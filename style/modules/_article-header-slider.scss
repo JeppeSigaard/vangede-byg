@@ -1,0 +1,43 @@
+.article-header-slideshow{
+    .flickity-viewport,
+    .flickity-slider,
+    .article-header-slideshow-item{
+        display: block;
+        position: absolute;
+        height: 100%!important;
+        width: 100%;
+        top: 0;
+    }
+    
+    .flickity-page-dots{
+
+        bottom: 20px;
+
+        .dot{
+            width: 15px;
+            height: 15px;
+            opacity: 1;
+            background-color: white;
+
+            &.is-selected{
+                opacity: .7;
+            }
+        }
+    }
+    
+    .flickity-prev-next-button{
+        background:transparent;
+        height: 100%;
+        border-radius: 0;
+        .arrow{
+            fill: white;
+        }    
+    }
+}
+
+
+
+.article-header-slideshow-item{
+    @extend %fill-bg
+    
+}

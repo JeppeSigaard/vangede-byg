@@ -40,6 +40,7 @@
         @extend %dark-marker;
         position: absolute;
         bottom:0;
+        z-index:5;
         left:0;
         padding: 20px 25px;
         background-color: rgba(black,.7);

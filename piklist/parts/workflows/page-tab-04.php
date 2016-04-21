@@ -1,7 +1,7 @@
 <?php 
 
 /*
-    Title: Tilføj til slideshow
+    Title: Tilføj til forsiden
     Order: 40
     Flow: page_workflow
 */

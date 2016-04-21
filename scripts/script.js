@@ -8,6 +8,7 @@
 
 //@koala-append 'modules/main-nav.js';
 //@koala-append 'modules/hero-banner.js';
+//@koala-append 'modules/article-header-slider.js';
 //@koala-append 'modules/testemonial-spinner.js';
 //@koala-append 'modules/cta.js';
 //@koala-append 'modules/sync-scroll.js';

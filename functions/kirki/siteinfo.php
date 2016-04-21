@@ -6,14 +6,6 @@ function smamo_theme_customize_register( $wp_customize ) {
 }
 
 
-Kirki::add_field( 'siteinfo', array(
-    'type'        => 'textarea',
-    'settings'    => 'blogdescription',
-    'label'       => esc_attr__( 'Sidebeskrivelse', 'smamo' ),
-    'section'     => 'title_tagline',
-    'default'     => '',
-    'priority'    => 10,
-) );
 
 Kirki::add_field( 'siteinfo', array(
     'type'        => 'text',
