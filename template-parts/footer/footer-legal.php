@@ -13,3 +13,8 @@ $legals = array(
     <span><?php echo $legal ?></span>
     <?php endforeach; ?>
 </div>
+<br/>
+<div class="footer-legal footer-copy">
+    <span>&copy; <?php echo esc_attr(date_i18n('Y')); ?> <?php echo esc_attr(get_bloginfo('name')); ?></span>
+    <span>Web: <a href="http://groenbech.com" target="_blank">Grønbech Kommunikation</a></span>
+</div>
